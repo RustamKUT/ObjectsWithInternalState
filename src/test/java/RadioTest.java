@@ -249,7 +249,7 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    // 5 тестов на изменение громкости вперед
+    // 6 тестов на изменение громкости вперед
 
     @Test
     public void nextVolumeFive() {
@@ -316,7 +316,20 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    // 5 тестов на изменение громкости назад
+    @Test
+    public void nextVolumeHundred() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(100);
+
+        radio.increaseVolume();
+
+        int expected = 100;
+        int actual = radio.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    // 6 тестов на изменение громкости назад
 
     @Test
     public void decreaseVolumeFive() {
@@ -378,6 +391,19 @@ class RadioTest {
         radio.decreaseVolume();
 
         int expected = 98;
+        int actual = radio.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void decreaseVolumeHundred() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(100);
+
+        radio.decreaseVolume();
+
+        int expected = 99;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
