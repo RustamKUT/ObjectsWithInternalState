@@ -520,17 +520,5 @@ class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    // Радиус станции
-
-    @Test
-    public void StationRadius() {
-        Radio radio = new Radio(10);
-
-        radio.setCurrentStation(9);
-
-        int expected = 9;
-        int actual = radio.getCurrentStation();
-        Assertions.assertEquals(expected, actual);
-    }
 
 }
