@@ -35,13 +35,14 @@ public class Radio {
         }
     }
 
-    public void decreaseVolume() {
-        if (currentVolume != 0) {
+    public void decreaseVolume() 
+    {
+        if (currentVolume != 0) 
+        {
             currentVolume--;
-        } else {
-            currentVolume = 0;
         }
     }
+    
 
 
     public int getCurrentStation() {
